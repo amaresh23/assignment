@@ -1,0 +1,102 @@
+<div class="panel panel-default panel-details animated fadeIn" ng-hide="loading">
+    
+    <!-- Panel Heading -->
+    <div class="panel-heading">
+        <div class="row">
+            <div class="col-xs-1 zero-padding text-center panel-head-back" ng-click="back()">
+                <i class="ion-android-arrow-back"></i>
+            </div>
+            <div class="col-xs-9 panel-head-title">
+                <h3 class="panel-title">{{title}}</h3>
+            </div>
+            <div class="col-xs-2 zero-left">
+                <div class="panel-img">
+                    <i class="{{icon}}"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Panel Content -->
+    <div class="panel-body">
+        <!-- PLANETS -->
+        <div ng-show="showPlanets">
+            <ul class="list-group">                
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            ROTATION PERIOD
+                        </div>
+                        <div class="col-xs-8 zero-left grey arial">
+                            : {{planets.rotation}}
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            ORBITAL PERIOD
+                        </div>
+                        <div class="col-xs-8 zero-left grey arial">
+                            : {{planets.orbit}}
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            DIAMETER
+                        </div>
+                        <div class="col-xs-8 zero-left grey arial">
+                            : {{planets.diameter}}
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            CLIMATE
+                        </div>
+                        <div class="col-xs-8 zero-left grey arial">
+                            : {{planets.climate}}
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            GRAVITY
+                        </div>
+                        <div class="col-xs-8 zero-left grey arial">
+                            : {{planets.gravity}}
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            SURFACE WATER
+                        </div>
+                        <div class="col-xs-8 zero-left grey arial">
+                            : {{planets.surface}}
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            POPULATION
+                        </div>
+                        <div class="col-xs-8 zero-left grey arial">
+                            : {{planets.population}}
+                        </div>
+                    </div>
+                </li>
+              
+            </ul>
+        </div> <!-- End Planets Details -->
+        
+    </div> <!-- End Panel Body -->
+</div>
+
+<div class="loading" ng-show="loading"></div>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+	<title>Star Wars</title>
+    
+    <!-- Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/ionicons.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- Javascript -->
+    <script src="js/angular.min.js"></script> 
+    <script src="js/angular-ui-router.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/app.home.js"></script>
+    <script src="js/app.details.js"></script>
+<style>
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+h2
+{
+padding: 30px 35px;
+margin: -10px -50px;
+text-align:center;
+}
+input[type=text],input[type=password]
+{
+width: 100%;
+height: 40px;
+padding: 5px;
+margin-bottom: 25px;
+margin-top: 5px;
+border: 2px solid #ccc;
+color: #4f4f4f;
+font-size: 16px;
+border-radius: 5px;
+}
+label
+{
+color: #464646;
+font-size: 18px;
+}
+center
+{
+font-size:32px;
+}
+input[type=button]
+{
+font-size: 16px;
+background: linear-gradient(#ffbc00 5%, #ffdd7f 100%);
+border: 1px solid #e5a900;
+color: #4E4D4B;
+font-weight: bold;
+cursor: pointer;
+width: 100%;
+border-radius: 5px;
+padding: 10px 0;
+outline:none;
+}
+input[type=button]:hover
+{
+background: linear-gradient(#ffdd7f 5%, #ffbc00 100%);
+}
+</style>
+<script>
+    function validate()
+{
+	var username = document.getElementById("username").value;
+	var password = document.getElementById("password").value;
+	if ( username == "Luke Skywalker" && password == "19BBY" ||username == "C-3PO" && password == "112BBY")
+	{
+		window.location = "main.html";
+		return false;
+	}
+	else
+	{
+		alert("Wrong Credentials");
+
+	}
+}
+</script>
+</head>
+    
+<body>
+    
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container top">
+            <div class="row">
+                <div class="col-xs-3">
+                    
+                </div>
+                <div class="col-xs-6">
+                    <div class="title">
+                        <img src="img/logo.png" class="img-responsive center-block">
+                    </div>
+                </div>
+                <div class="col-xs-3"></div>
+            </div>             
+            
+        </div>
+    </nav>
+    </br>
+	</br>
+	</br>
+	</br>
+	   <div class = "container">
+	<h2>May the Force be with you</h2></br>
+		<form id="form_id" method="post" name="myform">
+<label>User Name :</label>
+<input type="text" name="username" id="username"/>
+<label>Password :</label>
+<input type="password" name="password" id="password"/>
+<input type="button" value="Login" id="submit" onclick="validate()"/>
+</form>	
+</div>
+</body>
+</html>
